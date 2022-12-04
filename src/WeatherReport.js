@@ -14,7 +14,7 @@ export default function WeatherReport(props) {
       </ul>
       <div className="container">
         <div className="row">
-          <div className="col-6">
+          <div className="col-sm-6">
             <p>
               <img
                 src={props.data.icon}
@@ -24,7 +24,7 @@ export default function WeatherReport(props) {
               <ConvertTemperature celsius={props.data.temperature} />
             </p>
           </div>
-          <div className="col-6">
+          <div className="col-sm-6">
             <ul>
               <li className="weather-condition">
                 Wind: {Math.round(props.data.wind)} km/h

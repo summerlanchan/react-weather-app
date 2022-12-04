@@ -1,12 +1,15 @@
 import React from "react";
 import ConvertTemperature from "./ConvertTemperature";
+import FormatDate from "./FormatDate";
 
 export default function WeatherReport(props) {
   return (
     <div className="WeatherReport">
       <h1>{props.data.city}</h1>
       <ul>
-        <li>Wednesday 4:00</li>
+        <li>
+          <FormatDate date={props.data.date} />
+        </li>
         <li className="text-capitalize">{props.data.description}</li>
       </ul>
       <div className="container">

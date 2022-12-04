@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./WeatherApp.css";
 import FooterLink from "./FooterLink.js";
-import axios from "axios";
 import WeatherReport from "./WeatherReport";
 
 export default function WeatherApp(props) {
@@ -9,9 +9,11 @@ export default function WeatherApp(props) {
   const [city, citySearch] = useState(props.defaultCity);
 
   function handleResponse(response) {
+    console.log(response.data);
     showWeatherData({
       ready: true,
       temperature: response.data.temperature.current,
+      date: new Date(response.data.time * 1000),
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
       description: response.data.condition.description,

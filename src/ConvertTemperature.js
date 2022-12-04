@@ -17,20 +17,20 @@ export default function ConvertTemperature(props) {
   }
   if (unit === `celsius`) {
     return (
-      <div className="ConvertTemperature">
-        <h1 className="temperature">{Math.round(props.celsius)}</h1>
+      <span className="ConvertTemperature">
+        {Math.round(props.celsius)}
         <span>
           °C|
           <a href="/" onClick={showFahrenheit}>
             °F
           </a>
         </span>
-      </div>
+      </span>
     );
   } else {
     return (
       <span className="temperature">
-        <h1>{Math.round(fahrenheit())} </h1>
+        {Math.round(fahrenheit())}
         <a href="/" onclick={showCelsius}>
           °C
         </a>

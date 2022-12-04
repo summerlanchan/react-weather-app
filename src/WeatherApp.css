@@ -1,8 +1,39 @@
 .WeatherApp {
   border-radius: 10px;
   border-width: 1px solid;
-  max-width: fit-content;
+  border-color: pink;
+  max-width: 30%;
 }
 .form {
   border-radius: 10px;
+  padding: 5px;
+  margin-right: 5px;
+}
+.weatherIcon {
+  margin-right: -20px;
+  margin-left: -22px;
+  margin-top: -20px;
+}
+.city-name {
+  color: pink;
+  margin-inline-start: 10px;
+}
+.weather-condition .date-info {
+  color: #1b6a97;
+}
+button {
+  background: #a0c2e5;
+  color: #e2cee4;
+  border-radius: 20px;
+  padding: 5px 5px;
+  border: 1px solid;
+}
+button:hover {
+  background: #e2cee4;
+  color: #84c0fe;
+  cursor: pointer;
+  transition: all 299ms ease-in-out;
+}
+.card {
+  color: #84c0fe;
 }

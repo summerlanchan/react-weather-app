@@ -31,7 +31,7 @@ export default function ConvertTemperature(props) {
     return (
       <span className="temperature">
         {Math.round(fahrenheit())}
-        <a href="/" onclick={showCelsius}>
+        <a href="/" onClick={showCelsius}>
           °C
         </a>
         |°F

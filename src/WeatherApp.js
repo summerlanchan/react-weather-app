@@ -42,19 +42,19 @@ export default function WeatherApp(props) {
       <div className="WeatherApp">
         <div className="card">
           <div className="card-body">
-            <form onSubmit={handleSubmit}>
-              <input
-                type="search"
-                placeholder="Type your city"
-                className="form"
-                onChange={handleCityChange}
-              />
-              <button type="button" className="btn btn-primary">
-                Search
-              </button>
+            <form>
+              <div className="form-control-lg d-flex align-items-start">
+                <input
+                  type="text"
+                  placeholder="Type your city"
+                  className="form"
+                  onChange={handleCityChange}
+                />
+
+                <button onClick={handleSubmit}>Search</button>
+              </div>
             </form>
             <WeatherReport data={weatherData} />
-
             <FooterLink />
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import ConvertTemperature from "./ConvertTemperature";
 
 export default function WeatherReport(props) {
   return (
@@ -13,7 +14,7 @@ export default function WeatherReport(props) {
           <div className="col-6">
             <p>
               <img src={props.data.icon} alt={props.data.description} />{" "}
-              {Math.round(props.data.temperature)} <span>°C|°F</span>
+              <ConvertTemperature celsius={props.data.temperature} />
             </p>
           </div>
           <div className="col-6">

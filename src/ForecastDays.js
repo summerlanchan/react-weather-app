@@ -21,12 +21,12 @@ export default function ForecastDays(props) {
           alt="icon"
         />
       </div>
-      <span className="temp-max">
+      <div className="temp-max">
         {Math.round(props.data.temperature.maximum)}°C
-      </span>{" "}
-      <span className="temp-min">
+      </div>{" "}
+      <div className="temp-min">
         {Math.round(props.data.temperature.minimum)}°C
-      </span>
+      </div>
     </div>
   );
 }

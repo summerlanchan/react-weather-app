@@ -4,3 +4,7 @@
 .temp-min {
   opacity: 60%;
 }
+.weatherUnit {
+  font-weight: 500;
+  font-size: 40px;
+}

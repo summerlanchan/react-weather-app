@@ -55,7 +55,7 @@ export default function WeatherApp(props) {
                 <button onClick={handleSubmit}>Search</button>
               </div>
             </form>
-            <WeatherReport data={weatherData} />
+            <WeatherReport data={weatherData} /> <hr />
             <WeatherForecast data={weatherData} />
             <FooterLink />
           </div>

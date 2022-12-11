@@ -3,6 +3,7 @@ import axios from "axios";
 import "./WeatherApp.css";
 import FooterLink from "./FooterLink.js";
 import WeatherReport from "./WeatherReport";
+import WeatherForecast from "./WeatherForecast";
 
 export default function WeatherApp(props) {
   const [weatherData, showWeatherData] = useState({ ready: false });
@@ -55,6 +56,7 @@ export default function WeatherApp(props) {
               </div>
             </form>
             <WeatherReport data={weatherData} />
+            <WeatherForecast data={weatherData} />
             <FooterLink />
           </div>
         </div>

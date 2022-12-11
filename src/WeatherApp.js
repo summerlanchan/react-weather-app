@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./WeatherApp.css";
 import FooterLink from "./FooterLink.js";
 import WeatherReport from "./WeatherReport";
@@ -41,23 +42,25 @@ export default function WeatherApp(props) {
   if (weatherData.ready) {
     return (
       <div className="WeatherApp">
-        <div className="card">
-          <div className="card-body">
-            <form>
-              <div className="form-control-lg d-flex align-items-start">
-                <input
-                  type="text"
-                  placeholder="Type your city"
-                  className="form"
-                  onChange={handleCityChange}
-                />
+        <div className="container">
+          <div className="card">
+            <div className="card-body">
+              <form>
+                <div className="form-control-lg d-flex align-items-start">
+                  <input
+                    type="text"
+                    placeholder="Type your city"
+                    className="form"
+                    onChange={handleCityChange}
+                  />
 
-                <button onClick={handleSubmit}>Search</button>
-              </div>
-            </form>
-            <WeatherReport data={weatherData} /> <hr />
-            <WeatherForecast data={weatherData} />
-            <FooterLink />
+                  <button onClick={handleSubmit}>Search</button>
+                </div>
+              </form>
+              <WeatherReport data={weatherData} /> <hr />
+              <WeatherForecast data={weatherData} />
+              <FooterLink />
+            </div>
           </div>
         </div>
       </div>
